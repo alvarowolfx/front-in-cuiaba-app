@@ -1,10 +1,10 @@
 <ion-view view-title="Agenda">
-    <ion-content class="padding">    
+    <ion-content class="padding">
       <div class='list'>
-        <div class="card" ng-repeat="talk in talks">
-          <div class="item item-text-wrap item-avatar">        
+        <div class="card" ng-repeat="talk in vm.talks">
+          <div class="item item-text-wrap item-avatar">
             <img ng-show="talk.isTalk" ng-src='{{talk.img}}'>
-          <h2>{{talk.name}}</h2>        
+          <h2>{{talk.name}}</h2>
           <p>{{talk.hour}}
         </div>
           <div class="item item-text-wrap" ng-show="talk.isTalk" >
@@ -14,7 +14,7 @@
             <i class="icon ion-information"></i>
             Ver detalhes
          </a>
-          </div>    
+          </div>
         </div>
     </ion-content>
 </ion-view>

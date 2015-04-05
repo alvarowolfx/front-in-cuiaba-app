@@ -1,0 +1,20 @@
+<ion-view view-title="FrontInCuiaba 2015">
+  	<ion-content class="padding">
+  		<div class='list'>
+	  		<div class="card" ng-repeat="speaker in vm.speakers">
+		  		<div class="item item-avatar">
+		  			<img ng-src='{{speaker.img}}'>
+					<h2>{{speaker.name}}</h2>
+					<p>@{{speaker.twitter}}</p>
+				</div>
+			  	<div class="item item-text-wrap">
+			    		{{speaker.bio | seeMore }}
+			  	</div>
+			  	<a class="item item-icon-left positive" ui-sref='tabs.detail-speakers({id: speaker.twitter})'>
+				    <i class="icon ion-mic-c"></i>
+				    Ver palestra
+				 </a>
+	    		</div>
+    		</div>
+  	</ion-content>
+</ion-view>

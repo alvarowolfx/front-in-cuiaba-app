@@ -1,0 +1,54 @@
+angular.module('app')
+    .service('Speaker', Speaker);
+
+function Speaker() {
+    var speakers = [{
+        "name": "Alvaro Viebranz",
+        "twitter": "alvinhuu",
+        "img": "img/speaker-alvaro-viebranz.jpg",
+        "bio": "É Analista de TI na Sefaz-MT e CTO da startup cuiabana Procurix. Graduado pela UFMT em Ciência da Computação, com estudos na área de banco de dados NoSQL e buscas textuais. Curte muito desenvolvimento web, com foco maior no back-end, mas é entusiasta com front-end em AngularJS. É apaixonado por desenvolvimento mobile utilizando tanto tecnologias hibridas quanto nativas. Arduinista nas horas vagas."
+    }, {
+        "name": "Ney Simões",
+        "twitter": "neysimoes",
+        "img": "img/speaker-ney-simoes.jpg",
+        "bio": "É desenvolvedor front-end e mobile na empresa CI&T. Atua na área a 5 anos já passou por empresas como e-Construmarket e UOL. Começou a aprender programação por necessidade e se transformou na sua paixão de vida. Entusiasta de CSS acha que a vida pode ser mais bonita com um bom estilo."
+    }, {
+        "name": "Almir Filho",
+        "twitter": "almirfilho",
+        "img": "img/speaker-almir-filho.jpg",
+        "bio": "Desenvolvedor web na Globo.com e co-fundador do Loop Infinito, onde compartilha seu conhecimento, experiências e pensamentos sobre front-end. Possui mestrado em Ciência da Computação, é entusiasta e extremamente interessado pelo mundo dos padrões web e produtividade. Artista de sanduíches nas horas vagas."
+    }, {
+        "name": "Fabian Carlos",
+        "twitter": "fabiancarlos",
+        "img": "img/speaker-fabian-carlos.jpg",
+        "bio": "Desenvolvedor \"on demand\" apaixonado por Front-end e Back-end, desenvolve para web e mobile. Possui experiência com ferramentas de alta produtividade e escalabilidade como Ruby/Rails, Nodejs, Backbonejs, Angularjs, MongoDB. Vem atuando principalmente no desenvolvimento para Startups da região."
+    }, {
+        "name": "Dhyego Fernando",
+        "twitter": "dhyegofernando",
+        "img": "img/speaker-dhyego-fernando.jpg",
+        "bio": "Atualmente com 18 anos, é desenvolvedor web front e back-end apaixonado no que faz e fissurado em solucionar problemas com boas práticas e um bom código. Sempre buscou enfrentar novos desafios, conhecer e utilizar novas tecnologias pois acredita que um bom desenvolvedor não deve ser rotulado."
+    }, {
+        "name": "Davidson Fellipe",
+        "twitter": "davidsonfellipe",
+        "img": "img/speaker-davidson-fellipe.jpg",
+        "bio": "É Front-end engineer na Globo.com, onde já se envolveu com projetos para o Globoesporte.com, Futpédia, Tempo Real, Eu Atleta e Sportv. Bastante envolvido com a comunidade JS, sendo o fundador do Riojs e Pernambucojs, além de organizar os eventos Front in BH e Front in Recife. Graduado em engenharia da computação pela UPE, técnico em eletrônica pelo IFPE e Mestrando em Ciência da Computação na PUC-Rio."
+    }, {
+        "name": "Karuan Bertoluci",
+        "twitter": "karuanbertoluci",
+        "img": "img/speaker-karuan-bertoluci.jpg",
+        "bio": "É User Experience designer na CI&T, onde atua com desenvolvimento criativo e inovação. Passou por agências de publicidade e diversas startups trabalhando com desenvolvimento de produtos web/mobile e tecnologia. Estudante e experimentador de processos e metodologias de design para entender melhor o mundo dos usuários. Atualmente organizador do GDG Campinas e DevCast Day e tem como lema: update or die."
+    }];
+    return {
+        getAll: function() {
+            return speakers;
+        },
+        getByTwitter: function(twitter) {
+            for (var i in speakers) {
+                if (speakers[i].twitter === twitter) {
+                    return speakers[i];
+                }
+            }
+            return null;
+        }
+    }
+};
