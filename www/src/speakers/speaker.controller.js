@@ -6,5 +6,7 @@ SpeakersTabController.$inject = ['Speaker'];
 
 function SpeakersTabController(Speaker) {
     var vm = this;
-    vm.speakers = Speaker.getAll();
+    Speaker.getAll().then(function(speakers) {
+        vm.speakers = speakers;
+    });
 }

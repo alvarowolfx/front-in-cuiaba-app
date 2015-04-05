@@ -6,5 +6,7 @@ AgendaTabController.$inject = ['Talk'];
 
 function AgendaTabController(Talk) {
     var vm = this;
-    vm.talks = Talk.getAll();
+    Talk.getAll().then(function(talks) {
+        vm.talks = talks;
+    });
 }
