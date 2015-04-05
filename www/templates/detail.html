@@ -1,0 +1,32 @@
+<ion-view view-title="Informações">
+  <ion-content class="padding">    
+    <center>
+      <img class='img-avatar' ng-src='{{person.img}}'>
+    </center>    
+    <div class="card" >
+    <div class="item item-divider text-center">                    
+            <h2>Sobre</h2>                    
+        </div>
+          <div class="item">                    
+            <h2>{{person.name}}</h2>        
+            <p>@{{person.twitter}}
+        </div>
+        <div class="item item-text-wrap" ng-show="talk.isTalk" >
+              {{person.bio}}
+        </div>
+          </div>    
+          <div class="card" >
+          <div class="item item-divider text-center">                    
+            <h2>Palestra</h2>                    
+        </div>
+          <div class="item">                    
+            <h2>{{talk.name}}</h2>        
+            <p>{{talk.hour}}
+        </div>
+        <div class="item item-text-wrap" ng-show="talk.isTalk" >
+              {{talk.description}}
+        </div>
+          </div>  
+          <br/>  
+  </ion-content>
+</ion-view>

@@ -1,0 +1,20 @@
+<ion-view view-title="FrontInCuiaba 2015">
+  	<ion-content class="padding">  		
+  		<div class='list'>
+	  		<div class="card" ng-repeat="person in persons">
+		  		<div class="item item-avatar">				
+		  			<img ng-src='{{person.img}}'>
+					<h2>{{person.name}}</h2>				
+					<p>@{{person.twitter}}</p>				
+				</div>
+			  	<div class="item item-text-wrap">
+			    		{{person.bio | seeMore }}
+			  	</div>
+			  	<a class="item item-icon-left positive" ui-sref='tabs.detail-persons({id: person.twitter})'>
+				    <i class="icon ion-mic-c"></i>
+				    Ver palestra
+				 </a>
+	    		</div>    
+    		</div>
+  	</ion-content>
+</ion-view>
