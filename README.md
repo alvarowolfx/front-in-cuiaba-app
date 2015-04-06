@@ -18,6 +18,24 @@ npm install
 ionic serve
 ```
 
+## How to run on Simulator/Device
+- Basically you choose what platform you want to run, theese commands will configure the platform specific project :
+```shell
+# For iOS
+ionic platform ios
+# For Android 
+ionic platform android
+```
+- And to build and run on the platform you choose, run the command :
+```shell
+ionic run android
+# or 
+ionic run ios
+```
+
+- A more extensive guide can be found [here](http://ccoenraets.github.io/ionic-tutorial/build-ionic-project.html).
+
+
 ## Style guide
 The angular style guide followed by this project can be found [here](https://github.com/johnpapa/angular-styleguide)
 
