@@ -1,32 +1,32 @@
 <ion-view view-title="Informações">
-  <ion-content class="padding">
-    <center>
-      <img class='img-avatar' ng-src='{{vm.speaker.img}}'>
-    </center>
-    <div class="card" >
-    <div class="item item-divider text-center">
-            <h2>Sobre</h2>
+    <ion-content class="padding">
+        <center>
+            <img class='img-avatar' ng-src='{{vm.speaker.img}}'>
+        </center>
+        <div class="card">
+            <div class="item item-divider text-center">
+                <h2>Sobre</h2>
+            </div>
+            <div class="item">
+                <h2>{{vm.speaker.name}}</h2>
+                <p>@{{vm.speaker.twitter}}
+            </div>
+            <div class="item item-text-wrap">
+                {{vm.speaker.bio}}
+            </div>
         </div>
-          <div class="item">
-            <h2>{{vm.speaker.name}}</h2>
-            <p>@{{vm.speaker.twitter}}
+        <div class="card">
+            <div class="item item-divider text-center">
+                <h2>Palestra</h2>
+            </div>
+            <div class="item">
+                <h2>{{vm.talk.name}}</h2>
+                <p>{{vm.talk.hour}}</p>
+            </div>
+            <div class="item item-text-wrap" ng-show="vm.talk.isTalk && vm.talk.description">
+                {{vm.talk.description}}
+            </div>
         </div>
-        <div class="item item-text-wrap" ng-show="vm.talk.isTalk" >
-              {{vm.speaker.bio}}
-        </div>
-          </div>
-          <div class="card" >
-          <div class="item item-divider text-center">
-            <h2>Palestra</h2>
-        </div>
-          <div class="item">
-            <h2>{{vm.talk.name}}</h2>
-            <p>{{vm.talk.hour}}
-        </div>
-        <div class="item item-text-wrap" ng-show="vm.talk.isTalk" >
-              {{vm.talk.description}}
-        </div>
-          </div>
-          <br/>
-  </ion-content>
+        <br/>
+    </ion-content>
 </ion-view>

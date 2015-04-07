@@ -1,20 +1,21 @@
 <ion-view view-title="Agenda">
     <ion-content class="padding">
-      <div class='list'>
-        <div class="card" ng-repeat="talk in vm.talks">
-          <div class="item item-text-wrap item-avatar">
-            <img ng-show="talk.isTalk" ng-src='{{talk.img}}'>
-          <h2>{{talk.name}}</h2>
-          <p>{{talk.hour}}
-        </div>
-          <div class="item item-text-wrap" ng-show="talk.isTalk" >
-              {{talk.description | seeMore}}
-          </div>
-          <a class="item item-icon-left positive" ui-sref='tabs.detail-agenda({id: talk.person})' ng-show="talk.isTalk" >
-            <i class="icon ion-information"></i>
-            Ver detalhes
-         </a>
-          </div>
+        <div class='list'>
+            <div class="card" ng-repeat="talk in vm.talks">
+                <div class="item item-text-wrap" ng-class="{'item-avatar' : talk.person}">
+                    <img ng-show="talk.person" ng-src='{{talk.img}}'>
+                    <h2>{{talk.name}}</h2>
+                    <p>{{talk.hour}}
+                </div>
+                <div class="item item-text-wrap" ng-show="talk.description">
+                    {{talk.description | seeMore}}
+                </div>
+                <a class="item item-icon-left positive" ui-sref='tabs.detail-agenda({id: talk.person})'
+                   ng-show="talk.isTalk">
+                    <i class="icon ion-information"></i>
+                    Ver detalhes
+                </a>
+            </div>
         </div>
     </ion-content>
 </ion-view>

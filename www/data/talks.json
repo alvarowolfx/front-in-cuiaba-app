@@ -1,11 +1,13 @@
 [{
-    "name": "Credenciamento/Abertura",
+    "name": "Credenciamento/Welcome Coffe",
     "hour": "08h00",
     "isTalk": false
 }, {
-    "name": "Credenciamento/Welcome Coffe",
+    "name": "Abertura Front In Cuiabá",
+    "person": "juarezpaf",
+    "img": "img/eventhost-juarezpaf.jpg",
     "hour": "08h10",
-    "isTalk": false
+    "isTalk": true
 }, {
     "name": "Construindo Aplicativos Híbridos com Ionic Framework",
     "person": "alvinhuu",
