@@ -1,5 +1,5 @@
 # FrontInCuiaba App
-This app was developed for demo purposes for the talk that I gave at Front In Cuiaba event at 2015 ([link for the presentation](alvarowolfx.github.io/ionic-present)). So I'm sharing the code for those who are interested in studying Ionic Framework.
+This app was developed for demo purposes for the talk that I gave at Front In Cuiaba event at 2015 ([link for the presentation](http://alvarowolfx.github.io/ionic-present)). So I'm sharing the code for those who are interested in studying Ionic Framework.
 
 ## Pre requirements
 - Node.js and NPM installed (I recommend to do something like [this](https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md) to install global packages without sudo )
